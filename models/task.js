@@ -22,7 +22,7 @@ const Task = new taskSchema(
       default: 'medium'
     },
     assignedTo: {
-      type: string,
+      type: String
     },
     dueDate: {
       type: Date,
