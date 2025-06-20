@@ -6,7 +6,7 @@ const taskSchema = mongoose.Schema;
 const Task = new taskSchema(
   {
     title: {
-      type: String,
+      type: String, required: true
     },
     description: {
       type: String,
@@ -14,10 +14,12 @@ const Task = new taskSchema(
     status: {
       type: String,
       enum: ["todo", "in-progress", "done"],
+      default: 'todo'
     },
     priority: {
       type: String,
       enum: ["low", "medium", "high"],
+      default: 'medium'
     },
     assignedTo: {
       type: string,
